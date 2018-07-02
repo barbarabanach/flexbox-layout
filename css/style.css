@@ -405,7 +405,12 @@ body {
   margin: 0;
   font-family: 'Lato', sans-serif; }
 
+img {
+  max-width: 100%;
+  height: auto; }
+
 .container {
+  background-color: #e0e0e0;
   max-width: 1200px;
   min-height: auto;
   margin: 0 auto;
@@ -425,7 +430,8 @@ header:after {
 
 header h1 {
   padding: 10px;
-  text-align: center; }
+  text-align: center;
+  margin: 0; }
 
 header nav {
   display: flex; }
@@ -440,12 +446,24 @@ header nav {
       text-align: center; }
       header nav ul li:first-child {
         background-color: #6c5b7b; }
+        header nav ul li:first-child:hover {
+          background-color: #f67280;
+          transition: background-color 1s ease-out; }
       header nav ul li:nth-child(2) {
         background-color: #c06c84; }
+        header nav ul li:nth-child(2):hover {
+          background-color: #35477d;
+          transition: background-color 1s ease-out; }
       header nav ul li:nth-child(3) {
         background-color: #f67280; }
+        header nav ul li:nth-child(3):hover {
+          background-color: #35477d;
+          transition: background-color 1s ease-out; }
       header nav ul li:nth-child(4) {
         background-color: #6c5b7b; }
+        header nav ul li:nth-child(4):hover {
+          background-color: #f67280;
+          transition: background-color 1s ease-out; }
       header nav ul li a {
         text-decoration: none;
         color: #000; }
@@ -463,17 +481,35 @@ section p {
   flex-wrap: wrap;
   text-align: left; }
 
-.article-card h5 {
+.article-card h3 {
   padding: 10px 0 10px 0; }
 
 .article-card {
   padding: 2%;
-  flex-grow: 1;
-  flex-basis: 16%;
-  flex-direction: column;
+  -webkit-flex-grow: 1;
+  -webkit-flex-basis: 16%;
+  -webkit-flex-direction: column;
   /*flex: 1 16%;*/ }
 
-.article-info {
-  margin-top: auto; }
+.article-card:after {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background-color: #6c5b7b;
+  position: relative;
+  bottom: -5px;
+  display: block;
+  margin: 0 auto;
+  left: -156px; }
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .boxes .box {
+    background-color: #cccccc;
+    flex: 1;
+    margin: 25px;
+    padding: 10px; }
 
 /*# sourceMappingURL=style.css.map */
