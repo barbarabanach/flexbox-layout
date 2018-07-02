@@ -413,7 +413,13 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .container {
+    background-color: #e0e0e0;
     max-width: 1200px;
     min-height: auto;
     margin: 0 auto;
@@ -436,10 +442,10 @@ header {
     margin: 0 auto;
     }
 
-
     h1 {
         padding: 10px;
         text-align: center;
+        margin: 0;
     }
 
     nav {
@@ -458,16 +464,36 @@ header {
 
                 &:first-child {
                     background-color: #6c5b7b;
+
+                    &:hover {
+                       background-color: #f67280;
+                       transition: background-color 1s ease-out;
+                    }
                 }
                 &:nth-child(2) {
                     background-color: #c06c84;
+
+                    &:hover {
+                       background-color: #35477d;
+                       transition: background-color 1s ease-out; 
+                    }
                 }
 
                 &:nth-child(3) {
                     background-color: #f67280;
+
+                    &:hover {
+                       background-color: #35477d;
+                       transition: background-color 1s ease-out; 
+                    }
                 }
                 &:nth-child(4) {
                     background-color: #6c5b7b;
+
+                    &:hover {
+                        background-color: #f67280;
+                        transition: background-color 1s ease-out;
+                    }
                 }
                 a {
                     text-decoration: none;
@@ -485,7 +511,6 @@ section p {
     padding: 10px 0 0 0;
 }
 
-
 // section p:after {
 //     content: "\f107";
 //     font-family: FontAwesome;
@@ -502,18 +527,39 @@ section p {
   text-align: left;
 }
 
-.article-card  h5 {
+.article-card  h3 {
     padding: 10px 0 10px 0;
 }
 
 .article-card {
   padding: 2%;
-  flex-grow: 1;
-  flex-basis: 16%;
-  flex-direction: column;
+  -webkit-flex-grow: 1;
+  -webkit-flex-basis: 16%;
+  -webkit-flex-direction: column;
   /*flex: 1 16%;*/
 }
 
-.article-info {
-  margin-top: auto;
+.article-card:after {
+    content: "";
+    width: 40px;
+    height: 1px;
+    background-color: #6c5b7b;
+    position: relative;
+    bottom: -5px;
+    display: block;
+    margin: 0 auto;
+    left: -156px;
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .box {
+        background-color: #cccccc;
+        flex: 1;
+        margin: 25px;
+        padding: 10px;
+    }
 }

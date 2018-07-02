@@ -1,9 +1,5 @@
 module.exports = function (grunt) {
     grunt.initConfig({
-        watch: {
-            files: 'app/**/*.scss',
-            tasks: ['sass']
-        },
         sass: {
             options: {
                 sourceMap: true
@@ -27,6 +23,10 @@ module.exports = function (grunt) {
                     server: './app'
                 }
             }
+        },
+        watch: {
+            files: 'app/**/*.scss',
+            tasks: ['sass']
         }
     });
 
